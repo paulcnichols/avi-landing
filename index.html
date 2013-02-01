@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Avi Networks</title>
+    <link href="css/modern.css" rel="stylesheet">
+    <link href="css/modern-responsive.css" rel="stylesheet">
+    <link href="css/site.css" rel="stylesheet">
+    <style>
+        .bottom-bar {
+            position: fixed;
+            bottom: 0;
+            width: 940px ;
+            margin: auto;
+            z-index: 100;
+        }
+        h2 {
+            margin-left: 10px;
+        }
+    </style>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+    <script type="text/javascript" src="javascript/accordion.js"></script>
+    <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-38085992-1']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+    </script>
+    <script type="text/javascript">
+    function add_job(o) {
+      $.each(o.jobs, function (i, j) {
+        //$("#open_jobs").append("<li><a href='#'>"+j.title+"</a><div>"+j.description+"</div></li>");
+        $("#open_jobs").append("<li><a href='"+j.detail_url+"'>"+j.title+"</a></li>");
+      });
+      return o;
+    }
+    </script>
+</head>
+<body>
+    <div class="page">
+        <div class="navbar">
+            <h1><i class="icon-sunrise"></i>Avi Networks</h1>
+        </div>
+        <hr/>
+        <br/>
+        <div class="grid">
+            <div class="row">
+                <div class="span8">
+                    <div class="grid">
+                        <div class="row">
+                            <div class="span8 bg-color-red">
+                                <h2 class="fg-color-white"><b>Revolutionizing networking for the cloud era</b></h2>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="span8">
+                                <div class="hero-unit">
+                                    <p class="span6" style="font-size:20px">
+                                        Avi Networks is revolutionizing networking for the cloud era and enabling software defined data centers.
+                                    </p>
+                                    <p class="span6" style="font-size:20px">
+                                        Avi Networks is funded by Tier 1 venture capitalists and headquartered in Sunnyvale, California near Caltrain and major freeways.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>                    
+                </div>
+                <div class="span4">
+                    <div class="grid">
+                        <div class="row">
+                            <div class="span4 bg-color-orange">
+                                <h2 class="fg-color-white"><b>We're Hiring!</b></h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="span8 bg-color-green">
+                    <h2 class="fg-color-white"><b>Open Positions</b></h2>
+                </div>
+                <div class="span8">
+                    <ul class="accordion" id="open_jobs">
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="span8 bg-color-orangeDark">
+                    <h2 class="fg-color-white"><b>Contact Us</b></h2><!-- 945 Stewart Drive, Sunnyvale, CA, 94085 -->
+                </div>
+                <div class="span8">
+                    <div class="hero-unit">info@avinetworks.com</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="http://www.jobscore.com/jobs/avinetworks/feed.json?callback=add_job"></script>
+</body>
+</html>
+    
